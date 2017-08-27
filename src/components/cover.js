@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Img from 'react-image'
+
 import aries from 'assets/aries.png'
 import taurus from 'assets/taurus.png'
 import gemini from 'assets/gemini.png'
@@ -13,63 +13,39 @@ import capricorn from 'assets/capricorn.png'
 import aquarius from 'assets/aquarius.png'
 import pisces from 'assets/pisces.png'
 
+import CoverStar from './cover_star'
+
 
 class Cover extends Component {
     constructor(props) {
         super(props)
+        this.handletestChange = this.handletestChange.bind(this);
+        this.state = {t: ''};
+    }
+    handletestChange() {
+        console.log(this.state)
     }
     render() {
         return (
             <div id="cover">
+                <div className="title-contain">
+                    <div className="sub-title">#我愛 我偏執</div>
+                    <h1>十二星座<br/>偏執地雷</h1>
+                    <div className="step">Step1 : 選擇星座</div>
+                </div>
                 <div className="star-button-contain row">
-                    <div className="col-md-2">
-                        <Img src={aries} />
-                        <div className="star-text">牡羊座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={taurus} />
-                        <div className="star-text">金牛座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={gemini} />
-                        <div className="star-text">雙子座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={cancer} />
-                        <div className="star-text">巨蟹座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={leo} />
-                        <div className="star-text">獅子座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={virgo} />
-                        <div className="star-text">處女座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={libra} />
-                        <div className="star-text">天秤座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={scorpio} />
-                        <div className="star-text">天蠍座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={sagittarius} />
-                        <div className="star-text">射手座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={capricorn} />
-                        <div className="star-text">摩羯座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={aquarius} />
-                        <div className="star-text">水瓶座</div>
-                    </div>
-                    <div className="col-md-2">
-                        <Img src={pisces} />
-                        <div className="star-text">雙魚座</div>
-                    </div>
+                    <CoverStar star={aries} text="牡羊座" onTestChange={this.handletestChange}/>
+                    <CoverStar star={taurus} text="金牛座"/>
+                    <CoverStar star={gemini} text="雙子座"/>
+                    <CoverStar star={cancer} text="巨蟹座"/>
+                    <CoverStar star={leo} text="獅子座"/>
+                    <CoverStar star={virgo} text="處女座"/>
+                    <CoverStar star={libra} text="天秤座"/>
+                    <CoverStar star={scorpio} text="天蠍座"/>
+                    <CoverStar star={sagittarius} text="射手座"/>
+                    <CoverStar star={capricorn} text="摩羯座"/>
+                    <CoverStar star={aquarius} text="水瓶座"/>
+                    <CoverStar star={pisces} text="雙魚座"/>
                 </div>
             </div>
         )

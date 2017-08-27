@@ -1,9 +1,32 @@
 #cover{
-    background-image: url('./assets/star_bg.jpg')
+    background-image: url('./assets/star_bg.jpg');
+    display: block;
 }
 
-#cover .col-md-2{
-    margin-top: 10px;
+.title-contain{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 400px;
+    color: #FF0074;
+}
+
+.step{
+    font-size: 21px;
+}
+
+.title-contain .step{
+    margin-top: 30px;
+}
+
+.sub-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h1{
+    color: #FF0074;
+    text-shadow: none;
 }
 
 .star-button-contain{
@@ -22,4 +45,10 @@
     background-color: #ff0074;
     color: #FFFFFF;
     margin-top: 10px;
+}
+
+.cover-star{
+    cursor: pointer;
+    margin-top: 10px;
+    padding-left: 0;
 }
