@@ -27,10 +27,10 @@ class Cover extends Component {
     }
     render() {
         return (
-            <div id="cover">
-                <div className="title-contain">
+            <div id="cover" className={this.props.cover}> 
+                <div className="title-contain pink">
                     <div className="sub-title">#我愛 我偏執</div>
-                    <h1>十二星座<br/>偏執地雷</h1>
+                    <h1 className="pink">十二星座<br/>偏執地雷</h1>
                     <div className="step">Step1 : 選擇星座</div>
                 </div>
                 <div className="star-button-contain row">

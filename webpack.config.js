@@ -2,15 +2,18 @@ const path = require('path')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack')
 
 const config = {
     entry: {
-        star: './src/star.js'
+        star: './src/star.js',
+        emirates: './src/emirates.js'
     },
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'js/[name].[chunkhash].js'
     },
+    devtool: 'souce-map',
     module: {
         rules: [
             {
@@ -28,6 +31,13 @@ const config = {
                     publicPath: '../'
                 }),
                 test: /\.css$/
+            },
+            {
+                test:/\.(mp4|ogg|svg)$/,
+                loader:'file-loader',
+                options:{
+                    name:'videos/[name].[ext]'
+                }
             },
             {
                 test: /\.(jpg|png|gif|jpeg|svg)$/,
@@ -72,9 +82,21 @@ const config = {
     },
     plugins:[
         new CleanWebpackPlugin(['dist']),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "vendor",
+            minChunks: function(module){
+              return module.context && module.context.indexOf("node_modules") !== -1;
+            }
+        }),
         new HtmlWebpackPlugin({
             template: 'src/star.html',
             filename: 'star.html',
+            chunks: ['vendor', 'star']
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/emirates.html',
+            filename: 'emirates.html',
+            chunks: ['vendor', 'emirates']
         }),
         new ExtractTextWebpackPlugin({
             filename: 'css/[name].[contenthash].css'

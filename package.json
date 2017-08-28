@@ -23,7 +23,9 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-image": "^1.0.1"
+    "react-image": "^1.0.1",
+    "redux": "^3.7.2",
+    "video-react": "^0.8.6"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
