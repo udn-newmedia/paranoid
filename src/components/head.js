@@ -44,7 +44,7 @@ class Head extends Component {
                         <div className="head-text pink">我愛 <b>我偏執</b></div>
                     </a>
                 </div>
-                <div id="hbutton" className="squre">
+                <div id="hbutton" className="squre hidden-md hidden-lg">
                     <div id="nav-icon" className={this.state.active ? 'open': null} onClick={this.toggleClass}>
                         <span></span>
                         <span></span>
