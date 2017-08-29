@@ -3,11 +3,17 @@ import React, { Component } from 'react'
 import ShareBlock from './share_block'
 import Quote from './quote'
 
+const contentCss = {
+    padding: '100px 0'
+}
+
 class EmiratesContent extends Component {
+    constructor(props) {
+        super(props)
+    }
     render() {
         return (
-            <div className="container content">
-                <p><br /></p>
+            <div className="container content" style={contentCss}>
                 <ShareBlock />
                 <p><br /></p>
                 <p>在沙烏地阿拉伯，女性不能考駕照，更被禁止開車，但同樣出生伊斯蘭世界，有群女性靠著對天空幾近偏執的渴望，成功翱翔天際。</p>
