@@ -22,7 +22,7 @@ class Head extends Component {
     handleScroll(event) {
         
         let currentH = event.srcElement.body.scrollTop
-        let top = (window.innerWidth > 768) ? '6px' : '0px'
+        let top = (window.innerWidth > 1024) ? '6px' : '0px'
         if(currentH > window.innerHeight){
             this.setState({
                 style: { top: top}

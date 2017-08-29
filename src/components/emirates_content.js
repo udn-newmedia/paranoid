@@ -17,8 +17,30 @@ const contentCss = {
     padding: padding
 }
 
-const staticHeight = (window.innerWidth <= 768) ? (window.innerWidth - 40) : 653
-const webHeight = (window.innerWidth <= 768) ? 'auto' : '683px'
+let staticHeight
+
+if(window.innerWidth < 768){
+    staticHeight = (window.innerWidth - 40)
+}
+else if(window.innerWidth >= 768 && window.innerWidth < 1025){
+    staticHeight = (window.innerWidth - 200) * 9 / 12 - 7.5
+}
+else{
+    staticHeight = 654
+}
+
+let webHeight
+
+if(window.innerWidth < 768){
+    webHeight = 'auto'
+}
+else if(window.innerWidth >= 768 && window.innerWidth < 1025){
+    webHeight = ((window.innerWidth - 200) * 9 / 12 + 27 - 7.5) + 'px'
+}
+else{
+    webHeight = '683px'
+}
+
 
 const staticHeightCss = {
     height: webHeight,
@@ -47,7 +69,7 @@ class EmiratesContent extends Component {
                 </div>
                 <div>
                     <div className="row">
-                        <div className="col-md-9" style={staticHeightCss}>
+                        <div className="col-sm-9" style={staticHeightCss}>
                             <div style={containHeightCss}>
                                 <LazyLoad height={staticHeight} once offset={lazyOffset}>
                                     <ReactCSSTransitionGroup
@@ -62,9 +84,9 @@ class EmiratesContent extends Component {
                             </div>
                             <div className="img-say">瓦茲（左）與柏姬達（右）用自己的故事鼓勵女性勇敢追夢。</div>
                         </div>
-                        <div className="col-md-3 hidden-xs" style={staticHeightCss}></div>
-                        <div className="col-md-3 hidden-xs" style={staticHeightCss}></div>
-                        <div className="col-md-9" style={staticHeightCss}>
+                        <div className="col-sm-3 hidden-xs" style={staticHeightCss}></div>
+                        <div className="col-sm-3 hidden-xs" style={staticHeightCss}></div>
+                        <div className="col-sm-9" style={staticHeightCss}>
                             <div style={containHeightCss}>
                                 <LazyLoad height={staticHeight} once offset={lazyOffset}>
                                     <ReactCSSTransitionGroup
@@ -79,7 +101,7 @@ class EmiratesContent extends Component {
                             </div>
                             <div className="img-say">對天空的偏執讓她們從傳統束縛中解放。</div>
                         </div>
-                        <div className="col-md-9" style={staticHeightCss}>
+                        <div className="col-sm-9" style={staticHeightCss}>
                             <div style={containHeightCss}>
                                 <LazyLoad height={staticHeight} once offset={lazyOffset}>
                                     <ReactCSSTransitionGroup
@@ -94,7 +116,7 @@ class EmiratesContent extends Component {
                             </div>
                             <div className="img-say">達爾維什（右）與穆哈里（左）在國際婦女節共飛。</div>
                         </div>
-                        <div className="col-md-3 hidden-xs" style={staticHeightCss}></div>
+                        <div className="col-sm-3 hidden-xs" style={staticHeightCss}></div>
                     </div>
                 </div>
                 <div className="content" style={contentCss}>

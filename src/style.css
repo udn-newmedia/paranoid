@@ -379,16 +379,38 @@ footer{
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
+    #hbutton-contain{
+        padding-top: 46px;
+        width: 100%;
+        background-color: #FF0074;
+        transition: transform 0.7s ease;
+        transform: translate(0, -100%);
+    }
+    #hbutton-contain.open{
+        transform: translate(0, 0);
+    }
+    .squre{
+        width: 46px;
+        height: 46px;
+        position: fixed;
+        z-index: 10000;
+        border-radius: 3px;
+        background-color: #FF0074;
+    }
     .hbutton {
+        margin: 0 auto;
+        width: 80%;
 	    color: #FFFFFF;
-	    height: 60px;
-	    line-height: 60px;
-	    font-size: 20px;
-	    background-color: #231815;
-	    text-align: center;
-	    margin-top: 1px;
-	    letter-spacing: 8px;
-	    float: none;
+        height: 105px;
+        padding: 0;
+        line-height: 105px;
+        font-size: 30px;
+        background-color: #FF0074;
+        text-align: center;
+        margin-top: 1px;
+        letter-spacing: 8px;
+        float: none;
+        border-top: 1px dotted #FFFFFF;
 	}
     #head{
         background: transparent;
