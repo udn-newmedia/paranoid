@@ -10,9 +10,21 @@ class LogoBlock extends Component {
     render(){
         return(
             <div className="logo-contain container">
-                <Img src={nmd_logo} />
-                <Img className="udn-logo" src={udn_logo} />
-                <Img src={shopping_logo} />
+                <div className="logo-img">
+                    <a href="https://shopping.udn.com/mall/Cc1a00.do" target="_blank">
+                        <Img src={shopping_logo} />
+                    </a>
+                </div>
+                <div className="logo-img">
+                    <a href="https://udn.com/news/index" target="_blank">
+                        <Img className="udn-logo" src={udn_logo} />
+                    </a>
+                </div>
+                <div className="logo-img">
+                    <a href="https://udn.com/upf/newmedia/udn_newmedia/" target="_blank">
+                        <Img src={nmd_logo} />
+                    </a>
+                </div>
             </div>
         )
     }

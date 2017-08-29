@@ -15,25 +15,25 @@ class Relate extends Component{
                 <div className="container">
                     <h6 className="pink">#我愛 我偏執</h6>
                     <div className="row">
-                        <div className="col-sm-3">
+                        <div className="col-sm-6 col-md-3">
                             <a href="http://p.udn.com.tw/upf/newmedia/2017_data/20170303_3dmedia/index.html" target="_blank">
                                 <Img className="lazyload" src={relate1} />
                                 <p>細節魔人 作家王盛弘對完美的偏執</p>
                             </a>
                         </div>
-                        <div className="col-sm-3">
+                        <div className="col-sm-6 col-md-3">
                             <a href="http://p.udn.com.tw/upf/newmedia/2017_data/20170303_3dmedia/index.html" target="_blank">
                                 <Img className="lazyload" src={relate2} />
                                 <p>工作混搭生活 孫志華的工作偏執</p>
                             </a>
                         </div>
-                        <div className="col-sm-3">
+                        <div className="col-sm-6 col-md-3">
                             <a href="http://p.udn.com.tw/upf/newmedia/2017_data/20170303_3dmedia/index.html" target="_blank">
                                 <Img className="lazyload" src={relate3} />
                                 <p>偏執追夢 讓她們從傳統中解放</p>
                             </a>
                         </div>
-                        <div className="col-sm-3">
+                        <div className="col-sm-6 col-md-3">
                             <a href="http://p.udn.com.tw/upf/newmedia/2017_data/20170303_3dmedia/index.html" target="_blank">
                                 <Img className="lazyload" src={relate5} />
                                 <p>5位名人</p>

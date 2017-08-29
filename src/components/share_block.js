@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class ShareBlock extends Component{
     render() {
         return (
-            <div className="share-block container">
+            <div className="share-block">
                 <div className="fb-like-block">
                     <div className="fb-like" data-href="./star.html" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                 </div>
