@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import Indicator from './components/indicator'
 import Head from './components/head'
 import Covers from './components/covers'
-import SunContent from './components/sun_content'
+import HouContent from './components/hou_content'
 import Banner from './components/banner'
 import Relate from './components/relate'
 import FBComment from './components/fb_comment'
@@ -32,10 +32,10 @@ class App extends Component{
             return (
                 <div>
                     <Indicator />
-                    <Head link="./sun.html"/>
-                    <Covers cover="sun-cover" title1="混搭生活" title2="孫志華的工作偏執"/>
-                    <SunContent />
-                    <Banner banner_id="sun-banner" text="想知道孫總偏執的祕密武器？" button_text="點我取得秘密武器" img_say="圖／陳立凱 攝影" link="http://www.samsung.com/tw/tablets/galaxy-tab-s3-t825/"/>
+                    <Head link="./hou.html"/>
+                    <Covers cover="hou-cover" title1="天生偏執狂" title2="小提琴家侯以嘉"/>
+                    <HouContent />
+                    <Banner banner_id="sun-banner" text="當神秘東方遇上浪漫西方<br />侯以嘉  X 英國皇家愛樂管弦樂團" button_text="點我馬上購票" img_say="圖／侯以嘉提供 試聽音樂／聯合數位文創提供" link="https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=D0HOEFR5"/>
                     <Relate />
                     <FBComment />
                     <LogoBlock />

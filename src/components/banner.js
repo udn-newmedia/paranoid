@@ -15,7 +15,16 @@ class Banner extends Component {
             <div>
                 <a href={this.props.link} target="_blank" style={bannerCss}>
                     <div id={this.props.banner_id} className="banner">
-                        <div className="banner-text">{this.props.text}</div>
+                        <div className="banner-text">
+                            {this.props.text.split('<br />').map(function(item, key) {
+                                return (
+                                <span key={key}>
+                                    {item}
+                                    <br/>
+                                </span>
+                                )
+                            })}
+                        </div>
                         <div className="banner-button">{this.props.button_text}</div>
                     </div>
                 </a>

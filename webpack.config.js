@@ -9,7 +9,8 @@ const config = {
         star: './src/star.js',
         emirates: './src/emirates.js',
         wang: './src/wang.js',
-        sun: './src/sun.js'
+        sun: './src/sun.js',
+        hou: './src/hou.js'
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -109,6 +110,11 @@ const config = {
             template: 'src/sun.html',
             filename: 'sun.html',
             chunks: ['vendor', 'sun']
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/hou.html',
+            filename: 'hou.html',
+            chunks: ['vendor', 'hou']
         }),
         new ExtractTextWebpackPlugin({
             filename: 'css/[name].[contenthash].css'

@@ -13,9 +13,13 @@ body{
     right: 0;
 }
 
+#indicator-bar {
+    background-color: #F31D7E;
+}
+
 .hbutton{
-	padding: 0 20px;
-	color: #FFFFFF;
+	padding: 0 12px;
+	color: #F31D7E;
     height: 50px;
     line-height: 50px;
     font-size: 16px;
@@ -24,11 +28,16 @@ body{
 }
 
 .hbutton:hover{	
-	background-color: #FF0074;
+	color: #4A4A4A;
 }
 
 #report{
     margin-top: 0;
+}
+
+#head{
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 14px #e4e4e4;
 }
 
 #head a{
@@ -75,7 +84,7 @@ body{
     cursor: pointer;
     color: #FFFFFF;
     padding: 10px 85px;
-    background-color: #FF0074;
+    background-color: #F31D7E;
 }
 
 #emirates-banner{
@@ -106,6 +115,10 @@ body{
     background-image: url('./assets/sun_bg.jpg');
 }
 
+#cover.hou-cover{
+    background-image: url('./assets/hou_bg.jpg');
+}
+
 .gray-back{
     background-color: #DCDCDC;
 }
@@ -115,7 +128,7 @@ body{
 }
 
 .pink{
-    color: #FF0074;
+    color: #F31D7E;
 }
 
 .star-cover .title-contain{
@@ -135,6 +148,12 @@ body{
     position: absolute;
     top: 40%;
     right: 20%;
+}
+
+.hou-cover .title-contain{
+    position: absolute;
+    top: 26%;
+    right: 22%;
 }
 
 .step{
@@ -171,7 +190,7 @@ h2{
     text-align: center;
     padding: 2px 10px;
     font-size: 19px;
-    background-color: #FF0074;
+    background-color: #F31D7E;
     color: #FFFFFF;
     margin-top: 10px;
 }
@@ -216,7 +235,7 @@ p>br{
 }
 
 .star-link-button{
-    border: 1px solid #FF0074;
+    border: 1px solid #F31D7E;
     font-size: 30px;
     line-height: 60px;
     width: 303.33px;
@@ -363,7 +382,7 @@ footer{
     #hbutton-contain{
         padding-top: 46px;
         width: 100%;
-        background-color: #FF0074;
+        background-color: #F31D7E;
         transition: transform 0.7s ease;
         transform: translate(0, -100%);
     }
@@ -376,7 +395,7 @@ footer{
         position: fixed;
         z-index: 10000;
         border-radius: 3px;
-        background-color: #FF0074;
+        background-color: #F31D7E;
     }
     .hbutton {
         margin: 0 auto;
@@ -386,7 +405,7 @@ footer{
         padding: 0;
         line-height: 60px;
         font-size: 20px;
-        background-color: #FF0074;
+        background-color: #F31D7E;
         text-align: center;
         margin-top: 1px;
         letter-spacing: 8px;
@@ -420,7 +439,7 @@ footer{
     #hbutton-contain{
         padding-top: 46px;
         width: 100%;
-        background-color: #FF0074;
+        background-color: #F31D7E;
         transition: transform 0.7s ease;
         transform: translate(0, -100%);
     }
@@ -433,7 +452,7 @@ footer{
         position: fixed;
         z-index: 10000;
         border-radius: 3px;
-        background-color: #FF0074;
+        background-color: #F31D7E;
     }
     .hbutton {
         margin: 0 auto;
@@ -443,7 +462,7 @@ footer{
         padding: 0;
         line-height: 105px;
         font-size: 30px;
-        background-color: #FF0074;
+        background-color: #F31D7E;
         text-align: center;
         margin-top: 1px;
         letter-spacing: 8px;

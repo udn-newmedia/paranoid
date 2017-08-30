@@ -53,12 +53,12 @@ class Head extends Component {
                     </div>
                 </div>
                 <div id="hbutton-contain" className={this.state.active ? 'open': null}>
-                    <div className="hbutton" data-target="1">侯以嘉戀琴40年</div>
-                    <div className="hbutton" data-target="2">阿拉伯女機師追夢</div>
-                    <div className="hbutton" data-target="3">王盛弘的寫作偏執</div>
-                    <div className="hbutton" data-target="4">孫志華的工作偏執</div>
-                    <div className="hbutton" data-target="5">偏執狂名人</div>
-                    <div className="hbutton" data-target="6">12星座偏執診療室</div>
+                    <a href="./hou.html" target="_blank"><div className="hbutton" data-target="1">侯以嘉戀琴40年</div></a>
+                    <a href="./emirates.html" target="_blank"><div className="hbutton" data-target="2">阿拉伯女機師追夢</div></a>
+                    <a href="./wang.html" target="_blank"><div className="hbutton" data-target="3">王盛弘的寫作偏執</div></a>
+                    <a href="./sun.html" target="_blank"><div className="hbutton" data-target="4">孫志華的工作偏執</div></a>
+                    <a href="./famous.html" target="_blank"><div className="hbutton" data-target="5">偏執狂名人</div></a>
+                    <a href="./star.html" target="_blank"><div className="hbutton" data-target="6">12星座偏執診療室</div></a>
                 </div>
 
             </div>
