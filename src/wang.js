@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import Indicator from './components/indicator'
 import Head from './components/head'
 import Covers from './components/covers'
-import EmiratesContent from './components/emirates_content'
+import WangContent from './components/wang_content'
 import Banner from './components/banner'
 import Relate from './components/relate'
 import FBComment from './components/fb_comment'
@@ -32,10 +32,10 @@ class App extends Component{
             return (
                 <div>
                     <Indicator />
-                    <Head link="./emirates.html"/>
-                    <Covers cover="emirates-cover" title1="偏執追夢" title2="讓她們從傳統中解放"/>
-                    <EmiratesContent />
-                    <Banner banner_id="emirates-banner" text="親身體驗全球最棒的機內娛樂" button_text="前往體驗" img_say="圖／美聯社、阿聯酋航空提供" link="https://www.emirates.com/tw/chinese/"/>
+                    <Head link="./wang.html"/>
+                    <Covers cover="wang-cover" title1="細節魔人" title2="作家王盛弘對完美的偏執"/>
+                    <WangContent />
+                    <Banner banner_id="wang-banner" text="可以等等我嗎這世界，以步行的速度" button_text="點我 跟著王盛弘一起去看花" img_say="攝影／程宜華、張心慈" link="http://reading.udn.com/v2/bookDesc.do?id=115063"/>
                     <Relate />
                     <FBComment />
                     <LogoBlock />

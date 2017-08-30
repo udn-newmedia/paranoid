@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import Indicator from './components/indicator'
 import Head from './components/head'
 import Covers from './components/covers'
-import EmiratesContent from './components/emirates_content'
+import SunContent from './components/sun_content'
 import Banner from './components/banner'
 import Relate from './components/relate'
 import FBComment from './components/fb_comment'
@@ -32,10 +32,10 @@ class App extends Component{
             return (
                 <div>
                     <Indicator />
-                    <Head link="./emirates.html"/>
-                    <Covers cover="emirates-cover" title1="偏執追夢" title2="讓她們從傳統中解放"/>
-                    <EmiratesContent />
-                    <Banner banner_id="emirates-banner" text="親身體驗全球最棒的機內娛樂" button_text="前往體驗" img_say="圖／美聯社、阿聯酋航空提供" link="https://www.emirates.com/tw/chinese/"/>
+                    <Head link="./sun.html"/>
+                    <Covers cover="sun-cover" title1="混搭生活" title2="孫志華的工作偏執"/>
+                    <SunContent />
+                    <Banner banner_id="sun-banner" text="想知道孫總偏執的祕密武器？" button_text="點我點我" img_say="圖／陳立凱 攝影" link="http://www.samsung.com/tw/tablets/galaxy-tab-s3-t825/"/>
                     <Relate />
                     <FBComment />
                     <LogoBlock />

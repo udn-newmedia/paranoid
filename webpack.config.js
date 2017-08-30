@@ -7,7 +7,9 @@ const webpack = require('webpack')
 const config = {
     entry: {
         star: './src/star.js',
-        emirates: './src/emirates.js'
+        emirates: './src/emirates.js',
+        wang: './src/wang.js',
+        sun: './src/sun.js'
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -97,6 +99,16 @@ const config = {
             template: 'src/emirates.html',
             filename: 'emirates.html',
             chunks: ['vendor', 'emirates']
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/wang.html',
+            filename: 'wang.html',
+            chunks: ['vendor', 'wang']
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/sun.html',
+            filename: 'sun.html',
+            chunks: ['vendor', 'sun']
         }),
         new ExtractTextWebpackPlugin({
             filename: 'css/[name].[contenthash].css'

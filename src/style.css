@@ -3,6 +3,10 @@ body{
     display: block;
 }
 
+.content{
+    padding: 100px 0;
+}
+
 #hbutton-contain {
     position: absolute;
     top: 0;
@@ -78,12 +82,28 @@ body{
     background-image: url('./assets/emirates_banner.jpg');
 }
 
+#wang-banner{
+    background-image: url('./assets/wang_banner.jpg');
+}
+
+#sun-banner{
+    background-image: url('./assets/sun_banner.jpg');
+}
+
 #cover.star-cover{
     background-image: url('./assets/star_bg.jpg');
 }
 
 #cover.emirates-cover{
     background-image: url('./assets/emirates_bg.jpg');
+}
+
+#cover.wang-cover{
+    background-image: url('./assets/wang_bg.jpg');
+}
+
+#cover.sun-cover{
+    background-image: url('./assets/sun_bg.jpg');
 }
 
 .gray-back{
@@ -105,6 +125,18 @@ body{
     width: 400px;
 }
 
+.wang-cover .title-contain{
+    position: absolute;
+    right: 25%;
+    top: 25%;
+}
+
+.sun-cover .title-contain{
+    position: absolute;
+    top: 40%;
+    right: 20%;
+}
+
 .step{
     font-size: 21px;
 }
@@ -114,7 +146,7 @@ body{
 }
 
 .sub-title{
-    font-size: 18px;
+    font-size: 26px;
 }
 
 h1{
@@ -325,6 +357,9 @@ footer{
   }
 
 @media screen and (max-width: 767px){
+    .content{
+        padding: 50px 0;
+    }
     #hbutton-contain{
         padding-top: 46px;
         width: 100%;
@@ -379,6 +414,9 @@ footer{
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
+    .content{
+        padding: 50px 0;
+    }
     #hbutton-contain{
         padding-top: 46px;
         width: 100%;

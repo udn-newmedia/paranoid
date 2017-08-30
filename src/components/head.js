@@ -23,7 +23,7 @@ class Head extends Component {
         
         let currentH = event.srcElement.body.scrollTop
         let top = (window.innerWidth > 1024) ? '6px' : '0px'
-        if(currentH > window.innerHeight){
+        if(currentH > window.innerHeight/3){
             this.setState({
                 style: { top: top}
             })
@@ -54,10 +54,11 @@ class Head extends Component {
                 </div>
                 <div id="hbutton-contain" className={this.state.active ? 'open': null}>
                     <div className="hbutton" data-target="1">侯以嘉戀琴40年</div>
-                    <div className="hbutton" data-target="2">阿拉伯女性升空追夢</div>
-                    <div className="hbutton" data-target="3">作家王盛弘的書寫偏執</div>
+                    <div className="hbutton" data-target="2">阿拉伯女機師追夢</div>
+                    <div className="hbutton" data-target="3">王盛弘的寫作偏執</div>
                     <div className="hbutton" data-target="4">孫志華的工作偏執</div>
-                    <div className="hbutton" data-target="5">這些名人也是偏執狂</div>
+                    <div className="hbutton" data-target="5">偏執狂名人</div>
+                    <div className="hbutton" data-target="6">12星座偏執診療室</div>
                 </div>
 
             </div>
