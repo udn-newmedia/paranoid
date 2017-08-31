@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import LazyLoad from 'react-lazyload';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Slider from './slider'
+import classNames from 'classnames'
 
 import Quote from './quote'
 import ShareBlock from './share_block'
@@ -11,9 +12,56 @@ import hou1 from 'assets/hou1.jpg'
 import hou2 from 'assets/hou2.jpg'
 import hou3 from 'assets/hou3.jpg'
 
-class WangContent extends Component {
+import Sound from 'react-sound';
 
+class HouContent extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {soundStatus: 'STOPPED', playing: false, buttonStyle: classNames({
+            'glyphicon': true,
+            'glyphicon-triangle-right': true
+        })}
+        this.handleSongLoading = this.handleSongLoading.bind(this)
+        this.handleSongPlaying = this.handleSongPlaying.bind(this)
+        this.handleSongFinishedPlaying = this.handleSongFinishedPlaying.bind(this)
+        this.handleButtonClick = this.handleButtonClick.bind(this)
+        this.width = (window.innerWidth <= 768) ? (window.innerWidth - 40) : 425
+        this.height = this.width * 9 / 16
+    }
+    handleSongLoading() {
+
+    }
+    handleSongPlaying() {
+        
+    }
+    handleSongFinishedPlaying() {
+        
+        this.setState({
+            soundStatus: 'STOPPED',
+            buttonStyle: classNames({
+                'glyphicon': true,
+                'glyphicon-triangle-right': true,
+                'glyphicon-pause': false
+            }),
+            playing: false
+        })
+    }
+    handleButtonClick() {
+        const playState = this.state.playing
+        const playString = (playState == true) ? 'STOPPED' : 'PLAYING'
+        const buttonStyle = classNames({
+            'glyphicon': true,
+            'glyphicon-triangle-right': playState,
+            'glyphicon-pause': !playState
+        })
+        this.setState({
+            soundStatus: playString,
+            buttonStyle: buttonStyle,
+            playing: !playState
+        })
+    }
     render() {
+        
         return (
             <div className="container">
                 <div className="content">
@@ -34,10 +82,11 @@ class WangContent extends Component {
                             <p>侯以嘉對小提琴的迷戀，或許出生前就已埋下。父親侯伯治在移民加拿大前是上海芭蕾舞團樂隊首席，也是文革後首位演出西方古典樂的音樂家，女兒出生當天，當爸爸的也還在台上演出。如今雖淡出舞台的鎂光燈，但侯伯治仍是侯以嘉重要的音樂導師，尤其是碰上「梁祝」這首濃濃中國味的小提琴協奏曲，甚至拍了一支介紹「梁祝」的短片。</p>
                         </div>
                         <div className="col-md-6">
-                            <iframe width="425" height="239" src="https://www.youtube.com/embed/TDl53IN3lIA" frameBorder="0" allowFullScreen></iframe>
+                            <p className="hidden-md hidden-lg"><br /></p>
+                            <iframe width={this.width} height={this.height} src="https://www.youtube.com/embed/TDl53IN3lIA" frameBorder="0" allowFullScreen></iframe>
                         </div>
                     </div>
-                    <p><br /></p>
+                    <p className="hidden-xs"><br /></p>
                     <p><br /></p>
                     <p>「我在上海出生，移民後爸媽仍演奏中國音樂，至今家裡還是講上海話。」對侯以嘉而言，演出「梁祝」其實就是一趟檢視自己從何而來的尋根之旅。去年她為此回到上海，找到了「梁祝」的作曲家陳綱，並走訪「梁祝」的誕生地上海音樂學院，而這正好也是他父母求學工作、相識相戀的地點。侯以嘉說，演奏「梁祝」彷彿演奏父母的愛情故事，也是對於故鄉的回憶，每個音符都充滿故事。</p>
                     <p><br /></p>
@@ -46,8 +95,22 @@ class WangContent extends Component {
                             <Slider />
                         </div>
                         <div className="col-md-7">
+                            <Sound
+                                url="./src/assets/hou.mp3"
+                                playStatus={this.state.soundStatus}
+                                playFromPosition={0 /* in milliseconds */}
+                                onLoading={this.handleSongLoading}
+                                onPlaying={this.handleSongPlaying}
+                                onFinishedPlaying={this.handleSongFinishedPlaying}
+                            />
+                            <p><br/></p>
                             <p><b> 《梁祝小提琴協奏曲》</b></p>
+                            <p><br/></p>
                             <p>題材來自於中國家喻戶曉的經典愛情故事《梁山伯與祝英台》，全曲充滿中國戲曲風格，對受西方古典音樂訓練的小提琴家而言，如何演繹東方神韻是非常巨大的挑戰。侯以嘉在父親侯伯治指導下演出此曲，對父女兩人的意義非凡。</p>
+                            <p><br/></p>
+                            <button id="playButton" onClick={this.handleButtonClick}>
+                                <span id="playicon" className={this.state.buttonStyle}></span>視聽播放
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -56,4 +119,4 @@ class WangContent extends Component {
     }
 }
 
-export default WangContent
+export default HouContent

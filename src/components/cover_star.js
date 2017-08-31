@@ -4,15 +4,15 @@ import Img from 'react-image'
 class CoverStar extends Component {
     constructor(props){
         super(props)
-        this.test = this.test.bind(this)
+        this.selectStar = this.selectStar.bind(this)
     }
-    test(){
+    selectStar(){
         console.log(this.props)
-        // this.props.onTestChange(222);
+        this.props.onSelectStar(this.props.starGroup);
     }
     render(){
         return (
-            <div className="col-md-2 cover-star" onClick={this.test}>
+            <div className="col-md-2 cover-star" onClick={this.selectStar}>
                 <Img src={this.props.star} />
                 <div className="star-text">{this.props.text}</div>
             </div>

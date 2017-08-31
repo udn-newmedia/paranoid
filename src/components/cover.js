@@ -19,36 +19,41 @@ import CoverStar from './cover_star'
 class Cover extends Component {
     constructor(props) {
         super(props)
-        this.handletestChange = this.handletestChange.bind(this);
-        this.state = {t: ''};
+        this.selectStar = this.selectStar.bind(this);
     }
-    handletestChange() {
-        console.log(this.state)
+    selectStar(value) {
+        console.log(value)
+        this.props.onSelectStar(value)
     }
     render() {
-        return (
-            <div id="cover" className={this.props.cover}> 
-                <div className="title-contain pink">
-                    <div className="sub-title">#我愛 我偏執</div>
-                    <h1 className="pink">十二星座<br/>偏執地雷</h1>
-                    <div className="step">Step1 : 選擇星座</div>
+        if(this.props.select == 1){
+            return (
+                <div id="cover" className={this.props.cover}> 
+                    <div className="title-contain pink">
+                        <div className="sub-title">#我愛 我偏執</div>
+                        <h1 className="pink">十二星座<br/>偏執地雷</h1>
+                        <div className="step">Step1 : 選擇星座</div>
+                    </div>
+                    <div className="star-button-contain row">
+                        <CoverStar star={aries} text="牡羊座" onSelectStar={this.selectStar} starGroup="fire"/>
+                        <CoverStar star={taurus} text="金牛座" onSelectStar={this.selectStar} starGroup="earth"/>
+                        <CoverStar star={gemini} text="雙子座" onSelectStar={this.selectStar} starGroup="earth"/>
+                        <CoverStar star={cancer} text="巨蟹座" onSelectStar={this.selectStar} starGroup="earth"/>
+                        <CoverStar star={leo} text="獅子座" onSelectStar={this.selectStar} starGroup="fire"/>
+                        <CoverStar star={virgo} text="處女座" onSelectStar={this.selectStar} starGroup="water"/>
+                        <CoverStar star={libra} text="天秤座" onSelectStar={this.selectStar} starGroup="wind"/>
+                        <CoverStar star={scorpio} text="天蠍座" onSelectStar={this.selectStar} starGroup="water"/>
+                        <CoverStar star={sagittarius} text="射手座" onSelectStar={this.selectStar} starGroup="wind"/>
+                        <CoverStar star={capricorn} text="摩羯座" onSelectStar={this.selectStar} starGroup="fire"/>
+                        <CoverStar star={aquarius} text="水瓶座" onSelectStar={this.selectStar} starGroup="wind"/>
+                        <CoverStar star={pisces} text="雙魚座" onSelectStar={this.selectStar} starGroup="water"/>
+                    </div>
                 </div>
-                <div className="star-button-contain row">
-                    <CoverStar star={aries} text="牡羊座" onTestChange={this.handletestChange}/>
-                    <CoverStar star={taurus} text="金牛座"/>
-                    <CoverStar star={gemini} text="雙子座"/>
-                    <CoverStar star={cancer} text="巨蟹座"/>
-                    <CoverStar star={leo} text="獅子座"/>
-                    <CoverStar star={virgo} text="處女座"/>
-                    <CoverStar star={libra} text="天秤座"/>
-                    <CoverStar star={scorpio} text="天蠍座"/>
-                    <CoverStar star={sagittarius} text="射手座"/>
-                    <CoverStar star={capricorn} text="摩羯座"/>
-                    <CoverStar star={aquarius} text="水瓶座"/>
-                    <CoverStar star={pisces} text="雙魚座"/>
-                </div>
-            </div>
-        )
+            )
+        }
+        else{
+            return null
+        }
     }
 }
 

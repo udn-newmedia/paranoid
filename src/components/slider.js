@@ -12,6 +12,9 @@ class Slider extends Component {
         this.state = {active: 0}
         this.test = this.test.bind(this)
         this.test2 = this.test2.bind(this)
+        this.test3 = this.test3.bind(this)
+        this.active = 0
+        this.slideSpeed = 3000
         this.state.itemClass1 = classNames({
             'item': true,
             'active': true
@@ -24,16 +27,24 @@ class Slider extends Component {
         })
     }
     componentDidMount() {
-        // setInterval(this.test, 3000)
-        setTimeout(this.test, 3000)
+        setTimeout(this.test, this.slideSpeed)
     }
-    test() {
-        console.log(5)
+    test() {        
         this.setState({
+            itemClass1 : classNames({
+                'item': true,
+                'active': (this.active == 0),
+                'next': (this.active == 2),
+            }),
             itemClass2 : classNames({
                 'item': true,
-                'next': true,
-                
+                'active': (this.active == 1),
+                'next': (this.active == 0),
+            }),
+            itemClass3 : classNames({
+                'item': true,
+                'active': (this.active == 2),
+                'next': (this.active == 1),
             })
         })
         setTimeout(this.test2, 100)
@@ -42,16 +53,42 @@ class Slider extends Component {
         this.setState({
             itemClass1 : classNames({
                 'item': true,
-                'active': true,
-                'left': true
+                'active': (this.active == 0),
+                'next': (this.active == 2),
+                'left': (this.active == 0 || this.active == 2)
             }),
             itemClass2 : classNames({
                 'item': true,
-                'active': true,
-                'next': true,
-                'left': true
+                'active': (this.active == 1),
+                'next': (this.active == 0),
+                'left': (this.active == 0 || this.active == 1)
+            }),
+            itemClass3 : classNames({
+                'item': true,
+                'active': (this.active == 2),
+                'next': (this.active == 1),
+                'left': (this.active == 1 || this.active == 2)
             })
         })
+        setTimeout(this.test3, 600)
+    }
+    test3() {
+        this.active = (this.active + 1) % 3
+        this.setState({
+            itemClass1 : classNames({
+                'item': true,
+                'active': (this.active == 0),
+            }),
+            itemClass2 : classNames({
+                'item': true,
+                'active': (this.active == 1),
+            }),
+            itemClass3 : classNames({
+                'item': true,
+                'active': (this.active == 2),
+            })
+        })
+        setTimeout(this.test, this.slideSpeed)
     }
     render() {
         return (
