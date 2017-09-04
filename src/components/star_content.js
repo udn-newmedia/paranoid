@@ -10,6 +10,11 @@ import water from 'assets/water.mp4'
 import wind from 'assets/wind.mp4'
 import earth from 'assets/earth.mp4'
 
+import firePoster from 'assets/fire.jpg'
+import waterPoster from 'assets/water.jpg'
+import windPoster from 'assets/wind.jpg'
+import earthPoster from 'assets/earth.jpg'
+
 class StarContent extends Component{
     render() {
         if(this.props.select == 'wind'){
@@ -21,7 +26,7 @@ class StarContent extends Component{
                         <div className="col-md-7">
                             <Player
                                 playsInline
-                                poster="/assets/poster.png"
+                                poster={windPoster}
                                 src={wind}
                             />
                             <ShareBlock />
@@ -50,7 +55,7 @@ class StarContent extends Component{
                         <div className="col-md-7">
                             <Player
                                 playsInline
-                                poster="/assets/poster.png"
+                                poster={firePoster}
                                 src={fire}
                             />
                             <ShareBlock />
@@ -60,7 +65,7 @@ class StarContent extends Component{
                             <p>工作使命必達的偏執，有這種傾向的你們事業心很重，對於工作使命必達，是標準的忙起來就是工作狂的類型。</p>
                             <p><br/></p>
                             <p><b>偏執指數:</b></p>
-                            <p>★★★★★（重度）：羊座、獅子座、摩羯座</p>
+                            <p>★★★★★（重度）：牡羊座、獅子座、摩羯座</p>
                             <p><br/></p>
                             <p>★★★★（中度）：處女座、水瓶座，專業技能的養成企圖，是你持續往上的動力</p>
                             <p><br/></p>
@@ -79,7 +84,7 @@ class StarContent extends Component{
                         <div className="col-md-7">
                             <Player
                                 playsInline
-                                poster="/assets/poster.png"
+                                poster={waterPoster}
                                 src={water}
                             />
                             <ShareBlock />
@@ -108,7 +113,7 @@ class StarContent extends Component{
                         <div className="col-md-7">
                             <Player
                                 playsInline
-                                poster="/assets/poster.png"
+                                poster={earthPoster}
                                 src={earth}
                             />
                             <ShareBlock />
@@ -118,7 +123,7 @@ class StarContent extends Component{
                             <p>別人看來不起眼的生活小事，對有這種傾向的你們來說，卻是每天都會接觸到、感受最深的事情，怎能不重視呢？</p>
                             <p><br/></p>
                             <p><b>偏執指數:</b></p>
-                            <p>★★★★★（重度）：牛座、雙子座、巨蟹座</p>
+                            <p>★★★★★（重度）：金牛座、雙子座、巨蟹座</p>
                             <p><br/></p>
                             <p>★★★★（中度）：處女座、天秤座，你堅持生活就是要過得很有質感。</p>
                             <p><br/></p>

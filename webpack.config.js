@@ -37,7 +37,7 @@ const config = {
                 test: /\.css$/
             },
             {
-                test:/\.(mp4|ogg|svg)$/,
+                test:/\.(mp4|mp3|ogg|svg)$/,
                 loader:'file-loader',
                 options:{
                     name:'videos/[name].[ext]'
@@ -46,7 +46,7 @@ const config = {
             {
                 test: /\.(jpg|png|gif|jpeg|svg)$/,
                 loaders: [
-                    'file-loader?limit=10000&hash=sha512&digest=hex&name=image/[hash].[ext]',
+                    'file-loader?limit=10000&hash=sha512&digest=hex&name=image/[name].[hash].[ext]',
                     {
                         loader: 'image-webpack-loader',
                         query: {

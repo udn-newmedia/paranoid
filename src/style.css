@@ -10,6 +10,19 @@ body{
     margin-left: -45px;
 }
 
+.bg-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-layer img{
+    position: absolute;
+}
+
 #playButton {
     background-color: black;
     border-radius: 50px;
@@ -48,6 +61,30 @@ body{
     background-color: #F31D7E;
 }
 
+.animate-bar{
+    width: 150px;
+    position: absolute;
+    height: 1px;
+    background-color: #FFFFFF;
+    top: 16px;
+    transform: translate(-150px, 0);
+    right: 0;
+    animation-name: btnmove;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.7s;
+    animation-delay: 1.5s;
+}
+
+@keyframes btnmove{
+	from{
+        transform: translate(-150px, 0)
+    }
+    to{
+        transform: translate(150px, 0)
+    }
+}
+
 .hbutton{
 	padding: 0 12px;
 	color: #F31D7E;
@@ -59,7 +96,11 @@ body{
 }
 
 .hbutton:hover{	
-	color: #4A4A4A;
+	color: #F589BA;
+}
+
+.hbutton-select{
+    color: #F589BA;
 }
 
 #report{
@@ -67,7 +108,8 @@ body{
 }
 
 #head{
-    background-color: #f9f9f9;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #e4e4e4;
     box-shadow: 0px 2px 14px #e4e4e4;
 }
 
@@ -102,6 +144,33 @@ body{
 .fadein-appear.fadein-appear-active {
     opacity: 1;
     transition: all .7s ease;
+}
+
+.fadein-long-appear {
+    opacity: 0.01;
+}
+  
+.fadein-long-appear.fadein-long-appear-active {
+    opacity: 1;
+    transition: all 2s ease;
+}
+
+.leftin-appear {
+    transform: translate(-100px, 0);
+}
+
+.leftin-appear.leftin-appear-active {
+    transform: translate(0, 0);
+    transition: all 1.5s ease;
+}
+
+.rightin-appear {
+    transform: translate(100px, 0);
+}
+
+.rightin-appear.rightin-appear-active {
+    transform: translate(0, 0);
+    transition: all 1.5s ease;
 }
 
 .fadein-enter {
@@ -157,28 +226,12 @@ body{
     background-image: url('./assets/sun_banner.jpg');
 }
 
+#cover{
+   background-image: url('./assets/all_bg.jpg');
+}
+
 #cover.star-cover{
     background-image: url('./assets/star_bg.jpg');
-}
-
-#cover.emirates-cover{
-    background-image: url('./assets/emirates_bg.jpg');
-}
-
-#cover.wang-cover{
-    background-image: url('./assets/wang_bg.jpg');
-}
-
-#cover.sun-cover{
-    background-image: url('./assets/sun_bg.jpg');
-}
-
-#cover.hou-cover{
-    background-image: url('./assets/hou_bg.jpg');
-}
-
-#cover.famous-cover{
-    background-image: url('./assets/famous_bg.jpg');
 }
 
 .gray-back{
@@ -193,37 +246,6 @@ body{
     color: #F31D7E;
 }
 
-.star-cover .title-contain{
-    position: absolute;
-    left: 20%;
-    top: 20%;
-    width: 400px;
-}
-
-.wang-cover .title-contain{
-    position: absolute;
-    right: 14%;
-    top: 22%;
-}
-
-.sun-cover .title-contain{
-    position: absolute;
-    top: 40%;
-    right: 20%;
-}
-
-.hou-cover .title-contain{
-    position: absolute;
-    top: 26%;
-    right: 22%;
-}
-
-.famous-cover .title-contain{
-    position: absolute;
-    left: 28%;
-    top: 30%;
-}
-
 .step{
     font-size: 21px;
 }
@@ -233,24 +255,20 @@ body{
 }
 
 .sub-title{
-    font-size: 26px;
+    font-size: 22px;
+    width: 150px;
+    overflow: hidden;
+    position: relative;
 }
 
 h1{
     text-shadow: none;
-    line-height: 1.2;
+    font-weight: 100;
+    line-height: 1.3;
 }
 
 h2{
     margin-top: 0;
-}
-
-.star-button-contain{
-    width: 700px;
-    position: absolute;
-    left: 50%;
-    margin-left: -350px;
-    bottom: 50px;
 }
 
 .star-text{
@@ -268,6 +286,12 @@ h2{
     cursor: pointer;
     margin-top: 30px;
     padding-left: 0;
+    text-align: center;
+}
+
+.cover-star img{
+    width: 75%;
+    opacity: 0.8;
 }
 
 .cover-star img:hover{
@@ -286,8 +310,8 @@ p>br{
     line-height: 21px;
 }
 
-#star-link img{
-    width: initial;
+#star-link .other-contain img{
+    width: 150px;
 }
 
 #star-link .step{
@@ -304,18 +328,18 @@ p>br{
 }
 
 .star-link-subtext{
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .star-link-button{
     border: 1px solid #F31D7E;
-    font-size: 30px;
-    line-height: 60px;
+    font-size: 25px;
+    line-height: 45px;
     width: 303.33px;
-    height: 60px;
+    height: 45px;
     text-align: center;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 10px;
     transition: all 0.7s ease;
 }
 
@@ -449,6 +473,114 @@ footer{
   }
 
 @media screen and (max-width: 767px){
+    .mt-150{
+        margin-top: 50px;
+    }
+    .star-link-text{
+        font-size: 25px;
+        text-align: left;
+    }
+    .star-link-button{
+        width: auto;
+    }
+    #star-link .step{
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    #star .col-md-5{
+        margin-top: 30px;
+    }
+    .animate-bar{
+        transform: translate(-200px, 0);        
+    }
+    
+    @keyframes btnmove{
+        from{
+            transform: translate(-200px, 0)
+        }
+        to{
+            transform: translate(200px, 0)
+        }
+    }
+    #star-link .col-md-6{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    #star-link .col-md-6 img{
+        width: 100%;
+    }
+    .star-link-contain{
+        padding: 0 0 0 20px;
+    }
+    #cover.star-cover{
+        height: 1093px;
+        padding-top: 50px;
+        flex-direction: column;
+    }
+    #cover .step{
+        margin-top: 150px;
+    }
+    
+    .star-button-contain{
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+    }
+    .star-text {
+        width: 80px;
+        padding: 2px 10px;
+        font-size: 17px;
+        margin: 6px auto;
+    }
+    .cover-star img {
+        width: 72%;
+    }
+    .cover-star {
+        margin-top: 25px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #cover{
+        background-image: url('./assets/all_mobile_bg.jpg');
+    }
+    #cover.star-cover{
+        background-image: url('./assets/star_mobile_bg.jpg');
+    }
+    .emirates-cover .title-contain {
+        position: absolute;
+        top: auto;
+        bottom: 15%;
+        left: 0;
+        right: auto;
+    }
+    .hou-cover .title-contain {
+        position: absolute;
+        top: auto;
+        bottom: 20%;
+        left: 0;
+        right: auto;
+    }
+    .wang-cover .title-contain {
+        position: absolute;
+        top: auto;
+        bottom: 14%;
+        left: 0;
+        right: auto;
+    }
+    .sun-cover .title-contain {
+        position: absolute;
+        top: auto;
+        bottom: 26%;
+        left: 0;
+        right: auto;
+    }
+    .famous-cover .title-contain {
+        position: absolute;
+        top: 10%;
+        bottom: auto;
+        left: 0;
+        right: auto;
+    }
     .content{
         padding: 50px 0;
     }
@@ -467,7 +599,6 @@ footer{
         height: 46px;
         position: fixed;
         z-index: 10000;
-        border-radius: 3px;
         background-color: #F31D7E;
     }
     .hbutton {
@@ -487,12 +618,14 @@ footer{
 	}
     #head{
         background: transparent;
+        border: none;
         box-shadow: none;
     }
     #icon{
         opacity: 0;
     }
     .banner-text{
+        padding: 0 20px;
         font-size: 24px;
     }
     .banner-button{
@@ -503,10 +636,111 @@ footer{
     }
     .sub-title{
         padding: 0 30px;
+        width: 200px;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
+    .mt-150{
+        margin-top: 50px;
+    }
+    .star-link-text{
+        font-size: 25px;
+        text-align: left;
+    }
+    .star-link-button{
+        width: auto;
+    }
+    #star-link .step{
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    #star .col-md-5{
+        margin-top: 30px;
+    }
+    .animate-bar{
+        transform: translate(-200px, 0);        
+    }
+    
+    @keyframes btnmove{
+        from{
+            transform: translate(-200px, 0)
+        }
+        to{
+            transform: translate(200px, 0)
+        }
+    }
+    #star-link .col-md-6{
+        margin-top: 30px;
+    }
+    #star-link .col-md-6 img{
+        width: 100%;
+    }
+
+    #cover.star-cover{
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+    #cover .step{
+        margin-top: 150px;
+    }
+    .star-button-contain{
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+    }
+    
+    .cover-star img {
+        width: 72%;
+    }
+    .cover-star {
+        margin-top: 25px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #cover{
+        background-image: url('./assets/all_mobile_bg.jpg');
+    }
+    #cover.star-cover{
+        background-image: url('./assets/star_mobile_bg.jpg');
+    }
+    .emirates-cover .title-contain {
+        position: absolute;
+        top: auto;
+        bottom: 15%;
+        left: 0;
+        right: auto;
+    }
+    .hou-cover .title-contain {
+        position: absolute;
+        top: auto;
+        bottom: 20%;
+        left: 0;
+        right: auto;
+    }
+    .wang-cover .title-contain {
+        position: absolute;
+        top: auto;
+        bottom: 14%;
+        left: 0;
+        right: auto;
+    }
+    .sun-cover .title-contain {
+        position: absolute;
+        top: auto;
+        bottom: 26%;
+        left: 0;
+        right: auto;
+    }
+    .famous-cover .title-contain {
+        position: absolute;
+        top: 10%;
+        bottom: auto;
+        left: 0;
+        right: auto;
+    }
     .content{
         padding: 50px 0;
     }
@@ -525,17 +759,16 @@ footer{
         height: 46px;
         position: fixed;
         z-index: 10000;
-        border-radius: 3px;
         background-color: #F31D7E;
     }
     .hbutton {
         margin: 0 auto;
         width: 80%;
 	    color: #FFFFFF;
-        height: 105px;
+        height: 60px;
         padding: 0;
-        line-height: 105px;
-        font-size: 30px;
+        line-height: 60px;
+        font-size: 20px;
         background-color: #F31D7E;
         text-align: center;
         margin-top: 1px;
@@ -545,12 +778,14 @@ footer{
 	}
     #head{
         background: transparent;
+        border: none;
         box-shadow: none;
     }
     #icon{
         opacity: 0;
     }
     .banner-text{
+        padding: 0 20px;
         font-size: 24px;
     }
     .banner-button{
@@ -561,10 +796,52 @@ footer{
     }
     .sub-title{
         padding: 0 30px;
+        width: 200px;
+    }
+    h1{
+        margin-top: 20px;
+        text-align: left;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
+    .star-button-contain{
+        width: 700px;
+        position: absolute;
+        left: 50%;
+        margin-left: -350px;
+        bottom: 50px;
+    }
+    .star-cover .title-contain{
+        position: absolute;
+        left: 20%;
+        top: 20%;
+        width: 400px;
+    }
+    
+    .wang-cover .title-contain{
+        position: absolute;
+        right: 10%;
+        top: 55%;
+    }
+    
+    .sun-cover .title-contain{
+        position: absolute;
+        top: 40%;
+        right: 20%;
+    }
+    
+    .hou-cover .title-contain{
+        position: absolute;
+        top: 26%;
+        right: 18%;
+    }
+    
+    .famous-cover .title-contain{
+        position: absolute;
+        left: 45%;
+        top: 20%;
+    }
     .emirates-cover .title-contain{
         position: absolute;
         left: 16%;
@@ -576,6 +853,43 @@ footer{
 }
 
 @media screen and (min-width: 1281px){
+    .star-button-contain{
+        width: 700px;
+        position: absolute;
+        left: 50%;
+        margin-left: -350px;
+        bottom: 50px;
+    }
+    .star-cover .title-contain{
+        position: absolute;
+        left: 20%;
+        top: 20%;
+        width: 400px;
+    }
+    
+    .wang-cover .title-contain{
+        position: absolute;
+        right: 10%;
+        top: 55%;
+    }
+    
+    .sun-cover .title-contain{
+        position: absolute;
+        top: 40%;
+        right: 20%;
+    }
+    
+    .hou-cover .title-contain{
+        position: absolute;
+        top: 26%;
+        right: 18%;
+    }
+    
+    .famous-cover .title-contain{
+        position: absolute;
+        left: 45%;
+        top: 20%;
+    }
     .emirates-cover .title-contain{
         position: absolute;
         left: 16%;

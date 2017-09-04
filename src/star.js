@@ -15,6 +15,14 @@ class App extends Component{
         super()
         this.state = {select : 1}
         this.selectStar = this.selectStar.bind(this)
+        this.updateDimensions = this.updateDimensions.bind(this);
+    }
+    updateDimensions() {
+        // window.location.href = window.location.href
+    }
+
+    componentDidMount() {
+        window.addEventListener("resize", this.updateDimensions);
     }
     selectStar(value){
         console.log(value)
@@ -22,12 +30,13 @@ class App extends Component{
             select: value
         })
         this.forceUpdate()
+        window.scrollTo(0,0)
     }
     render() {
         return (
             <div id="star">
                 <Indicator />
-                <Head link="./star.html"/>
+                <Head link="./star.html" select="6"/>
                 <ReactCSSTransitionGroup
                     transitionName="fadein"
                     transitionAppear={true}

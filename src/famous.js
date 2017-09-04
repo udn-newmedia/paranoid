@@ -21,7 +21,7 @@ class App extends Component{
         }
 
         updateDimensions() {
-            window.location.href = window.location.href
+            // window.location.href = window.location.href
         }
 
         componentDidMount() {
@@ -32,10 +32,10 @@ class App extends Component{
             return (
                 <div id="famous">
                     <Indicator />
-                    <Head link="./famous.html"/>
+                    <Head link="./famous.html" select="5"/>
                     <Covers cover="famous-cover" title1="這些名人也是偏執狂！" title2=""/>
                     <FamousContent />
-                    <Relate />
+                    <Relate exclude5={true} />
                     <FBComment />
                     <LogoBlock />
                     <Footer />

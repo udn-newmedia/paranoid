@@ -32,7 +32,7 @@ class starSelectBlock extends Component {
                     <Sepretor select={this.props.select}/>
                     <StarContent select={this.props.select}/>
                     <StarLink select={this.props.select} onSelectStar={this.selectStar}/>
-                    <Relate />
+                    <Relate exclude5={true} />
                     <FBComment />
                     <LogoBlock />
                     <Footer />

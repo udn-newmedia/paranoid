@@ -12,6 +12,8 @@ import hou1 from 'assets/hou1.jpg'
 import hou2 from 'assets/hou2.jpg'
 import hou3 from 'assets/hou3.jpg'
 
+import sound from 'assets/hou.mp3'
+
 import Sound from 'react-sound';
 
 class HouContent extends Component {
@@ -25,7 +27,15 @@ class HouContent extends Component {
         this.handleSongPlaying = this.handleSongPlaying.bind(this)
         this.handleSongFinishedPlaying = this.handleSongFinishedPlaying.bind(this)
         this.handleButtonClick = this.handleButtonClick.bind(this)
-        this.width = (window.innerWidth <= 768) ? (window.innerWidth - 40) : 425
+        if(window.innerWidth < 768){
+            this.width = window.innerWidth - 40
+        }
+        else if(window.innerWidth >= 768 && window.innerWidth <= 1024){
+            this.width = window.innerWidth - 200
+        }
+        else{
+            this.width = 425
+        }
         this.height = this.width * 9 / 16
     }
     handleSongLoading() {
@@ -70,11 +80,11 @@ class HouContent extends Component {
                     <p>4歲的妳迷戀些什麼？這些事物現在還愛嗎？</p>
                     <p>如果答案是肯定的，那恭喜妳可能是天生偏執狂！</p>
                     <p><br /></p>
-                    <p>4歲那年，侯以嘉（Susanne Hou）收到的耶誕禮物是爸爸親手做的小提琴，從那時起他就愛上音樂。雙親都是小提琴家，會走上音樂之路看似理所當然，但若不是真心迷戀，又怎能從4歲堅持到40歲？</p>
-                    <Quote text="表演時，我覺得自己像個無所不能的超級英雄，能徜徉各種時空，但同時卻也發現自己在無垠宇宙裡，是如此苗小。" refer="- Susanne Hou" />
-                    <p>「每一場演奏，都好像把你剝個精光，並用放大鏡仔細檢驗音樂跟你的關係。」侯以嘉說，音樂其實是探索自己的方式，妳是誰？妳從何而來？妳的人生哲學又是什麼？這些問題在演奏時都會逐漸明瞭。</p>
+                    <p>4歲那年，侯以嘉（Susanne Hou）收到的耶誕禮物是爸爸親手做的小提琴，從那時起她就愛上音樂。雙親都是小提琴家，會走上音樂之路看似理所當然，但若不是真心迷戀，又怎能從4歲堅持到40歲？</p>
+                    <Quote text="表演時，我覺得自己像個無所不能的超級英雄，能徜徉各種時空，但同時卻也發現自己在無垠宇宙裡，是如此渺小。" refer="─ Susanne Hou" />
+                    <p>「每一場演奏，都好像把妳剝個精光，並用放大鏡仔細檢驗音樂跟妳的關係。」侯以嘉說，音樂其實是探索自己的方式，妳是誰？妳從何而來？妳的人生哲學又是什麼？這些問題在演奏時都會逐漸明瞭。</p>
                 </div>
-                <ImgBlock img1={hou1} img2={hou2} img3={hou3} imgSay1="還是小女孩的侯以嘉，拉著爸爸親手做的小提琴。" imgSay2="從4歲到40歲，侯以嘉對小提琴的迷戀絲毫未減。" imgSay3="侯以嘉認為，透過音樂讓他更認識自己。" />
+                <ImgBlock img1={hou1} img2={hou2} img3={hou3} imgSay1="還是小女孩的侯以嘉，拉著爸爸親手做的小提琴。" imgSay2="從4歲到40歲，侯以嘉對小提琴的迷戀絲毫未減。" imgSay3="侯以嘉認為，透過音樂讓她更認識自己。" />
                 <div className="content">
                     <h2>偏執 讓我認識我是誰</h2>
                     <div className="row">
@@ -88,7 +98,7 @@ class HouContent extends Component {
                     </div>
                     <p className="hidden-xs"><br /></p>
                     <p><br /></p>
-                    <p>「我在上海出生，移民後爸媽仍演奏中國音樂，至今家裡還是講上海話。」對侯以嘉而言，演出「梁祝」其實就是一趟檢視自己從何而來的尋根之旅。去年她為此回到上海，找到了「梁祝」的作曲家陳綱，並走訪「梁祝」的誕生地上海音樂學院，而這正好也是他父母求學工作、相識相戀的地點。侯以嘉說，演奏「梁祝」彷彿演奏父母的愛情故事，也是對於故鄉的回憶，每個音符都充滿故事。</p>
+                    <p>「我在上海出生，移民後爸媽仍演奏中國音樂，至今家裡還是講上海話。」對侯以嘉而言，演出「梁祝」其實就是一趟檢視自己從何而來的尋根之旅。去年她為此回到上海，找到了「梁祝」的作曲家陳綱，並走訪「梁祝」的誕生地上海音樂學院，而這正好也是她父母求學工作、相識相戀的地點。侯以嘉說，演奏「梁祝」彷彿演奏父母的愛情故事，也是對於故鄉的回憶，每個音符都充滿故事。</p>
                     <p><br /></p>
                     <div className="row">
                         <div className="col-md-5">
@@ -96,7 +106,7 @@ class HouContent extends Component {
                         </div>
                         <div className="col-md-7">
                             <Sound
-                                url="./src/assets/hou.mp3"
+                                url={sound}
                                 playStatus={this.state.soundStatus}
                                 playFromPosition={0 /* in milliseconds */}
                                 onLoading={this.handleSongLoading}
@@ -109,7 +119,7 @@ class HouContent extends Component {
                             <p>題材來自於中國家喻戶曉的經典愛情故事《梁山伯與祝英台》，全曲充滿中國戲曲風格，對受西方古典音樂訓練的小提琴家而言，如何演繹東方神韻是非常巨大的挑戰。侯以嘉在父親侯伯治指導下演出此曲，對父女兩人的意義非凡。</p>
                             <p><br/></p>
                             <button id="playButton" onClick={this.handleButtonClick}>
-                                <span id="playicon" className={this.state.buttonStyle}></span>視聽播放
+                                <span id="playicon" className={this.state.buttonStyle}></span>馬上試聽
                             </button>
                         </div>
                     </div>

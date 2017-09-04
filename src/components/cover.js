@@ -30,10 +30,10 @@ class Cover extends Component {
             return (
                 <div id="cover" className={this.props.cover}> 
                     <div className="title-contain pink">
-                        <div className="sub-title">#我愛 我偏執</div>
+                        <div className="sub-title">#我愛 <b>我偏執</b></div>
                         <h1 className="pink">十二星座<br/>偏執地雷</h1>
-                        <div className="step">Step1 : 選擇星座</div>
                     </div>
+                    <div className="step pink">Step1 : 選擇星座</div>
                     <div className="star-button-contain row">
                         <CoverStar star={aries} text="牡羊座" onSelectStar={this.selectStar} starGroup="fire"/>
                         <CoverStar star={taurus} text="金牛座" onSelectStar={this.selectStar} starGroup="earth"/>

@@ -21,7 +21,7 @@ class App extends Component{
         }
 
         updateDimensions() {
-            window.location.href = window.location.href
+            // window.location.href = window.location.href
         }
 
         componentDidMount() {
@@ -32,11 +32,11 @@ class App extends Component{
             return (
                 <div>
                     <Indicator />
-                    <Head link="./sun.html"/>
+                    <Head link="./sun.html" select="4"/>
                     <Covers cover="sun-cover" title1="混搭生活" title2="孫志華的工作偏執"/>
                     <SunContent />
                     <Banner banner_id="sun-banner" text="想知道孫總偏執的祕密武器？" button_text="點我取得秘密武器" img_say="圖／陳立凱 攝影" link="http://www.samsung.com/tw/tablets/galaxy-tab-s3-t825/"/>
-                    <Relate />
+                    <Relate exclude4={true} />
                     <FBComment />
                     <LogoBlock />
                     <Footer />

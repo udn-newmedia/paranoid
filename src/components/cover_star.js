@@ -12,7 +12,7 @@ class CoverStar extends Component {
     }
     render(){
         return (
-            <div className="col-md-2 cover-star" onClick={this.selectStar}>
+            <div className="col-xs-4 col-md-2 cover-star" onClick={this.selectStar}>
                 <Img src={this.props.star} />
                 <div className="star-text">{this.props.text}</div>
             </div>
