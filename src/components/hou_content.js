@@ -75,7 +75,7 @@ class HouContent extends Component {
         return (
             <div className="container">
                 <div className="content">
-                    <ShareBlock />
+                    <ShareBlock link="https://udn.com/upf/newmedia/2017_data/paranoid/hou.html"/>
                     <p><br /></p>
                     <p>4歲的妳迷戀些什麼？這些事物現在還愛嗎？</p>
                     <p>如果答案是肯定的，那恭喜妳可能是天生偏執狂！</p>

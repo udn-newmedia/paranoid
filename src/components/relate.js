@@ -6,6 +6,8 @@ import relate3 from 'assets/relate3.jpg'
 import relate4 from 'assets/relate4.jpg'
 import relate5 from 'assets/relate5.jpg'
 
+import Utils from '../utils/utils'
+
 class Relate extends Component{
     constructor() {
         super()
@@ -16,6 +18,20 @@ class Relate extends Component{
             return 'col-sm-6 col-md-3 hidden'
         }
         return 'col-sm-6 col-md-3'
+    }
+    componentDidMount() {
+        var title = $('title').text()
+        var platform = (Utils.detectMob() == true) ? 'Mob' : 'PC'
+        console.log(platform)
+        $('#report a').click(function(){
+            ga("send", {
+                "hitType": "event",
+                "eventCategory": "超連結點擊",
+                "eventAction": "click",
+                "eventLabel": "[" + platform + "] [" + title + "] [" + $(this).attr('href') + "] [relate]"
+            });
+            console.log("eventLabel : " + "[" + platform + "] [" + title + "] [" + $(this).attr('href') + "] [relate]")
+        })
     }
     render(){
         return(

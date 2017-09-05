@@ -40,7 +40,7 @@ class App extends Component{
                     <WangContent />
                     <Banner banner_id="wang-banner" text="可以等等我嗎這世界，以步行的速度" button_text="點我 跟著王盛弘一起去看花" img_say="攝影／程宜華、張心慈" link="http://reading.udn.com/v2/bookDesc.do?id=115063"/>
                     <Relate exclude3={true} />
-                    <FBComment />
+                    <FBComment link="https://udn.com/upf/newmedia/2017_data/paranoid/wang.html"/>
                     <LogoBlock />
                     <Footer />
                 </div>

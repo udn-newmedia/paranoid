@@ -18,7 +18,7 @@ class EmiratesContent extends Component {
         return (
             <div className="container">
                 <div className="content">
-                    <ShareBlock />
+                    <ShareBlock link="https://udn.com/upf/newmedia/2017_data/paranoid/emirates.html" />
                     <p><br /></p>
                     <p>在沙烏地阿拉伯，女性不能考駕照，更被禁止開車，但同樣出生伊斯蘭世界，有群女性靠著對天空幾近偏執的渴望，成功翱翔天際。</p>
                     <p><br /></p>

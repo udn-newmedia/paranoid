@@ -37,7 +37,7 @@ class App extends Component{
                     <EmiratesContent />
                     <Banner banner_id="emirates-banner" text="親身體驗全球最棒的機內娛樂" button_text="前往體驗" img_say="圖／美聯社、阿聯酋航空提供" link="https://www.emirates.com/tw/chinese/"/>
                     <Relate exclude2={true} />
-                    <FBComment />
+                    <FBComment link="https://udn.com/upf/newmedia/2017_data/paranoid/emirates.html"/>
                     <LogoBlock />
                     <Footer />
                 </div>

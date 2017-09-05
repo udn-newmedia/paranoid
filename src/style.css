@@ -10,6 +10,22 @@ body{
     margin-left: -45px;
 }
 
+video{
+    width: 100%;
+}
+
+#star-content{
+    padding: 0;
+}
+
+#star-link{
+    padding: 0;
+}
+
+#star-link a:hover{
+    text-decoration: none;
+}
+
 .bg-layer{
     position: absolute;
     top: 0;
@@ -477,6 +493,9 @@ footer{
   }
 
 @media screen and (max-width: 767px){
+    #star-content .col-md-5{
+        margin-top: 25px;
+    }
     .mt-150{
         margin-top: 50px;
     }
@@ -645,6 +664,9 @@ footer{
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
+    #star-content .col-md-5{
+        margin-top: 25px;
+    }
     .mt-150{
         margin-top: 50px;
     }

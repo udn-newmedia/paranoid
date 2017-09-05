@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Utils from '../utils/utils'
+
 class Head extends Component {
     constructor(props) {
         super(props)
@@ -10,6 +12,18 @@ class Head extends Component {
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
+        var title = $('title').text()
+        var platform = (Utils.detectMob() == true) ? 'Mob' : 'PC'
+        console.log(platform)
+        $('#head a').click(function(){
+            ga("send", {
+                "hitType": "event",
+                "eventCategory": "超連結點擊",
+                "eventAction": "click",
+                "eventLabel": "[" + platform + "] [" + title + "] [" + $(this).attr('href') + "] [head]"
+            });
+            console.log("eventLabel : " + "[" + platform + "] [" + title + "] [" + $(this).attr('href') + "] [head]")
+        })
     }
     
     componentWillUnmount() {

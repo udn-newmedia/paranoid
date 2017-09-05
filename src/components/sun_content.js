@@ -16,7 +16,7 @@ class SunContent extends Component {
         return (
             <div className="container">
                 <div className="content">
-                    <ShareBlock />
+                    <ShareBlock link="https://udn.com/upf/newmedia/2017_data/paranoid/sun.html"/>
                     <p><br /></p>
                     <p>「其實我還蠻喜歡工作跟生活融合不分的狀態，對我來說很有安全感」，聯合線上總經理這樣的說法自虐嗎？</p>
                     <p><br /></p>

@@ -36,7 +36,7 @@ class App extends Component{
                     <Covers cover="famous-cover" title1="這些名人也是偏執狂！" title2=""/>
                     <FamousContent />
                     <Relate exclude5={true} />
-                    <FBComment />
+                    <FBComment link="https://udn.com/upf/newmedia/2017_data/paranoid/famous.html"/>
                     <LogoBlock />
                     <Footer />
                 </div>

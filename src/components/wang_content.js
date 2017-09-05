@@ -21,7 +21,7 @@ class WangContent extends Component {
         return (
             <div className="container">
                 <div className="content">
-                    <ShareBlock />
+                    <ShareBlock link="https://udn.com/upf/newmedia/2017_data/paranoid/wang.html"/>
                     <p><br /></p>
                     <p>「可以呀！我能聊聊在寫書、編書上的偏執。」作家王盛弘一口答應採訪邀請。</p>
                     <p><br /></p>

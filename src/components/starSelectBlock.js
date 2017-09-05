@@ -14,13 +14,15 @@ class starSelectBlock extends Component {
     constructor() {
         super()
         this.selectStar = this.selectStar.bind(this);
+        this.state = {select: 1}
     }
     selectStar(value) {
         console.log(value)
+        this.setState({select: value})
         this.props.onSelectStar(value)
     }
     render() {
-        if(this.props.select != 1){
+        if(this.state.select != 1){
             return (
                 <ReactCSSTransitionGroup
                     transitionName="fadein"
@@ -29,9 +31,9 @@ class starSelectBlock extends Component {
                     transitionEnter={false}
                     transitionLeave={false} >
                 
-                    <Sepretor select={this.props.select}/>
-                    <StarContent select={this.props.select}/>
-                    <StarLink select={this.props.select} onSelectStar={this.selectStar}/>
+                    <Sepretor select={this.state.select}/>
+                    <StarContent select={this.state.select}/>
+                    <StarLink select={this.state.select} onSelectStar={this.selectStar}/>
                     <Relate exclude5={true} />
                     <FBComment />
                     <LogoBlock />

@@ -61,7 +61,7 @@ class FamousContent extends Component {
         return (
             <div className="container">
                 <div className="content">
-                    <ShareBlock />
+                    <ShareBlock link="https://udn.com/upf/newmedia/2017_data/paranoid/famous.html"/>
                     <p><br /></p>
                     <p>偏執不是病，它帶領我們探索自我的敏感、瘋狂、幻想，創造獨特風格的生活態度、價值觀，與甘心沉淪的安全地帶。</p>
                     <h2>偏執是我的保護色</h2>

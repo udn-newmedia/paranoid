@@ -37,7 +37,7 @@ class App extends Component{
                     <SunContent />
                     <Banner banner_id="sun-banner" text="想知道孫總偏執的祕密武器？" button_text="點我取得秘密武器" img_say="圖／陳立凱 攝影" link="http://www.samsung.com/tw/tablets/galaxy-tab-s3-t825/"/>
                     <Relate exclude4={true} />
-                    <FBComment />
+                    <FBComment link="https://udn.com/upf/newmedia/2017_data/paranoid/sun.html"/>
                     <LogoBlock />
                     <Footer />
                 </div>
