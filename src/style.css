@@ -226,6 +226,10 @@ body{
     background-image: url('./assets/sun_banner.jpg');
 }
 
+#hou-banner{
+    background-image: url('./assets/hou_banner.jpg');
+}
+
 #cover{
    background-image: url('./assets/all_bg.jpg');
 }
