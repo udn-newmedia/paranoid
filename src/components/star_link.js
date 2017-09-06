@@ -156,7 +156,6 @@ class StarLink extends Component{
             return(
                 <div id="star-link" className="container content">
                     <div className="step pink">Step3 : 如何舒緩你的理念偏執！</div>
-                    <h2>維持理念的偏執：</h2>
                     <div className="row">
                         <div className="col-xs-6 star-link-contain">
                             <div className="star-link-text gray">重度 ★★★★★<br/>天秤座、<span className="hidden-md hidden-lg"><br/></span>射手座、<span className="hidden-md hidden-lg"><br/></span>水瓶座</div>
@@ -202,7 +201,7 @@ class StarLink extends Component{
                     <div className="step pink">Step3 : 如何舒緩你的工作偏執！</div>
                     <div className="row">
                         <div className="col-xs-6 star-link-contain">
-                            <div className="star-link-text gray">重度 ★★★★★<br/>牡羊座、<span className="hidden-md hidden-lg"><br/></span>獅子座、<span className="hidden-md hidden-lg"><br/></span>摩羯座</div>
+                            <div className="star-link-text gray">重度 ★★★★★<br/>牡羊座、獅子座、摩羯座</div>
                             <p className="star-link-subtext gray">創造專屬零工作空間</p>
                             <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=20271231844N0t52auD#heavy" target="_blank"><div className="star-link-button pink">深入分析</div></a>
                         </div>
@@ -245,7 +244,7 @@ class StarLink extends Component{
                     <div className="step pink">Step3 : 如何舒緩你的感情偏執！</div>
                     <div className="row">
                         <div className="col-xs-6 star-link-contain">
-                            <div className="star-link-text gray">重度 ★★★★★<br/>處女座、<span className="hidden-md hidden-lg"><br/></span>天蠍座、<span className="hidden-md hidden-lg"><br/></span>雙魚座</div>
+                            <div className="star-link-text gray">重度 ★★★★★<br/>處女座、天蠍座、雙魚座</div>
                             <p className="star-link-subtext gray">別人的愛難掌握 對自己的愛可以</p>
                             <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=202709081OH55qxiJ3H#heavy" target="_blank"><div className="star-link-button pink">深入分析</div></a>
                         </div>
@@ -288,7 +287,7 @@ class StarLink extends Component{
                     <div className="step pink">Step3 : 如何舒緩你的生活小事偏執！</div>
                     <div className="row">
                         <div className="col-xs-6 star-link-contain">
-                            <div className="star-link-text gray">重度 ★★★★★<br/>金牛座、<span className="hidden-md hidden-lg"><br/></span>雙子座、<span className="hidden-md hidden-lg"><br/></span>巨蟹座</div>
+                            <div className="star-link-text gray">重度 ★★★★★<br/>金牛座、雙子座、巨蟹座</div>
                             <p className="star-link-subtext gray">擁有生活小幫手，是最棒的舒壓</p>
                             <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=202709082dV2L0MWPS7#heavy" target="_blank"><div className="star-link-button pink">深入分析</div></a>
                         </div>

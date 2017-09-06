@@ -44,8 +44,8 @@ class StarContent extends Component{
             },
             water: {
                 h2: '戀愛優先的感情偏執：處女、天蠍、雙魚',
-                poster: windPoster,
-                video: wind,
+                poster: waterPoster,
+                video: water,
                 content1: '戀愛就是的一切，你們認為能在情場上獲得滿足與勝利的人，才算人生勝利組。',
                 content2: '★★★★★（重度）：處女座、天蠍座、雙魚座',
                 content3: '★★★★（中度）：巨蟹座、獅子座，被重視的感覺是你人生必需品',
@@ -53,8 +53,8 @@ class StarContent extends Component{
             },
             earth: {
                 h2: '注重日常的偏執：金牛、巨蟹、雙子',
-                poster: windPoster,
-                video: wind,
+                poster: earthPoster,
+                video: earth,
                 content1: '別人看來不起眼的生活小事，對有這種傾向的你們來說，卻是每天都會接觸到、感受最深的事情，怎能不重視呢？',
                 content2: '★★★★★（重度）：金牛座、雙子座、巨蟹座',
                 content3: '★★★★（中度）：處女座、天秤座，你堅持生活就是要過得很有質感。',
