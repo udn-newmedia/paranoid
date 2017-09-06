@@ -46,6 +46,14 @@ class Covers extends Component {
                 return 'rightin'
             }
         }
+        else if(cover === 'emirates-cover' && window.innerWidth <= 768){
+            if(direction === 'right') {
+                return 'leftin'
+            }
+            if(direction === 'left') {
+                return 'rightin'
+            }
+        }
         else{
             if(direction === 'right') {
                 return 'rightin'

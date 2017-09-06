@@ -42,31 +42,31 @@ class Relate extends Component{
                         <div className={this.block_class(this.props.exclude1)}>
                             <a href="./hou.html" target="_blank">
                                 <img className="lazyload" src={relate1} />
-                                <p>天生偏執狂 小提琴家侯以嘉</p>
+                                <p>侯以嘉戀琴40年</p>
                             </a>
                         </div>
                         <div className={this.block_class(this.props.exclude2)}>
                             <a href="./emirates.html" target="_blank">
                                 <img className="lazyload" src={relate2} />
-                                <p>偏執追夢 讓她們從傳統中解放</p>
+                                <p>阿拉伯女機師追夢</p>
                             </a>
                         </div>
                         <div className={this.block_class(this.props.exclude3)}>
                             <a href="./wang.html" target="_blank">
                                 <img className="lazyload" src={relate3} />
-                                <p>細節魔人 作家王盛弘對完美的偏執</p>
+                                <p>細節魔人王盛弘</p>
                             </a>
                         </div>
                         <div className={this.block_class(this.props.exclude4)}>
                             <a href="./sun.html" target="_blank">
                                 <img className="lazyload" src={relate4} />
-                                <p>混搭生活 孫志華的工作偏執</p>
+                                <p>孫志華的工作偏執</p>
                             </a>
                         </div>
                         <div className={this.block_class(this.props.exclude5)}>
                             <a href="./star.html" target="_blank">
                                 <img className="lazyload" src={relate5} />
-                                <p>十二星座 偏執地雷</p>
+                                <p>12星座偏執診療室</p>
                             </a>
                         </div>
                     </div>
