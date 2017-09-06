@@ -150,7 +150,7 @@ video{
 .lazyload-appear.lazyload-appear-active {
     opacity: 1;
     transform: translate(0, 0);
-    transition: all .7s ease;
+    transition: all .7s linear;
 }
 
 .fadein-appear {
@@ -159,7 +159,7 @@ video{
   
 .fadein-appear.fadein-appear-active {
     opacity: 1;
-    transition: all .7s ease;
+    transition: all .7s linear;
 }
 
 .fadein-long-appear {
@@ -168,7 +168,7 @@ video{
   
 .fadein-long-appear.fadein-long-appear-active {
     opacity: 1;
-    transition: all 2s ease;
+    transition: all 2s linear;
 }
 
 .leftin-appear {
@@ -177,7 +177,7 @@ video{
 
 .leftin-appear.leftin-appear-active {
     transform: translate(0, 0);
-    transition: all 1.5s ease;
+    transition: all 1.5s linear;
 }
 
 .rightin-appear {
@@ -186,7 +186,7 @@ video{
 
 .rightin-appear.rightin-appear-active {
     transform: translate(0, 0);
-    transition: all 1.5s ease;
+    transition: all 1.5s linear;
 }
 
 .fadein-enter {
@@ -195,7 +195,7 @@ video{
   
 .fadein-enter.fadein-enter-active {
     opacity: 1;
-    transition: all .7s ease;
+    transition: all .7s linear;
 }
 
 .fadein-leave {
@@ -204,7 +204,7 @@ video{
 
 .fadein-leave.fadein-leave-active {
     opacity: 0.01;
-    transition: all .7s ease;
+    transition: all .7s linear;
 }
 
 .banner{
