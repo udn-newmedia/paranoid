@@ -15,6 +15,9 @@ class Head extends Component {
         var title = $('title').text()
         var platform = (Utils.detectMob() == true) ? 'Mob' : 'PC'
         console.log(platform)
+        if(Utils.isFacebookApp()){
+            $('#hbutton').css('margin-top', '60px')
+        }
         $('#head a').click(function(){
             ga("send", {
                 "hitType": "event",

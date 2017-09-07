@@ -17,6 +17,12 @@ var Utils = {
 	    }
 	},
 
+	isFacebookApp : function() {
+		var ua = navigator.userAgent || navigator.vendor || window.opera;
+		return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+	},
+	
+
 	detectIE: function() {
 	    var ua = window.navigator.userAgent;
 	  
