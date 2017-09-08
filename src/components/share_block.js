@@ -11,7 +11,7 @@ class ShareBlock extends Component{
     lineShare() {
         var title = $('title').text()
         var platform = (Utils.detectMob() == true) ? 'Mob' : 'PC'
-        if(Utile.detectMob()){
+        if(Utils.detectMob()){
             //手機
             window.location.href="//line.me/R/msg/text/?" + title + "%0D%0A%0D%0A" + $('meta[property="og:description"]').attr('content') + "%0D%0A%0D%0A" + window.location.href + "%0D%0A%0D%0A";
         }else{
